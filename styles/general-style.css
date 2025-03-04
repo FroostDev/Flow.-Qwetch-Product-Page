@@ -1,0 +1,250 @@
+/* Importation des polices */
+@font-face {
+    font-family: AnonymousProReg;
+    src: url(../fonts/AnonymousPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: AnonymousProBold;
+    src: url(../fonts/AnonymousPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: Antic;
+    src: url(../fonts/Antic-Regular.ttf);
+}
+
+/* Style de base */
+:root {
+    --bg-color: #FFF;
+    --primary-color: #FF4949;
+    --secondary-color: #FFB8B8;
+    --title-size: 32px;
+    --title-font: AnonymousProBold;
+    --subtitle-size: 24px;
+    --font-size: 16px;
+    --link-font: AnonymousProReg;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: Antic;
+    font-size: var(--font-size);
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h3 {
+    font-size: var(--subtitle-size);
+    font-family: var(--link-font);
+}
+
+hr {
+    border-color: #FF4949;
+    width: 100%;
+}
+
+/* Style du header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 32px 0px 32px;
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+nav h2 {
+    font-family: var(--link-font);
+}
+
+/* Style du main */
+.principal-product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 64px;
+}
+
+.product-introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.product-introduction h3 {
+    margin: 0px;
+}
+
+.feedback-score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+}
+
+/* Liste des atouts du produit */
+.cta-buy {
+    display: flex;
+    gap: 32px;
+}
+
+.product-aspects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aspect-line {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+/* Selecteur de quantité */
+.quantity-zone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity {
+    border: var(--primary-color) 2px solid;
+    width: fit-content;
+    padding: 8px 32px;
+}
+
+.quantity p {
+    margin: 0;
+}
+
+.arrow-choose {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-choose button{
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-choose button:hover {
+    background: var(--secondary-color);
+}
+
+/* Bouton ajouter au panier */
+.add-to-cart-btn {
+    background: var(--primary-color);
+    width: fit-content;
+    padding: 16px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    box-shadow: #ececec 5px 5px 25px,
+                #ececec 3px 3px 15px,
+                #ececec 1px 1px 5px;
+}
+
+.add-to-cart-btn p {
+    color: var(--bg-color);
+    font-family: var(--link-font);
+    font-size: var(--subtitle-size);
+    margin:0;
+}
+
+/* Style des caractérisitques détaillées */
+.technical-sheet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    width: 300px;
+    border: var(--primary-color) 2px solid;
+}
+
+/* Style des avis */
+.feedback-zone {
+    margin: 64px 128px;
+}
+
+.feedback-list {
+    display: flex;
+    gap: 8px;
+}
+
+.feedback-case {
+    width:300px;
+    min-height: 200px;
+    border: var(--primary-color) 2px solid;
+    flex: none;
+    padding: 8px;
+}
+
+.feedback-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-score-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Style du footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0px 32px;
+    margin-top: 128px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-family: var(--link-font);
+}
+
+footer p {
+    font-family: var(--link-font);
+}
+
+.social-media {
+    display: flex;
+    gap: 16px;
+}
